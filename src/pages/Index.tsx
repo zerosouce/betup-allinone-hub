@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import BottomNav from "@/components/BottomNav";
 import Hero from "@/components/Hero";
 import GameCategories from "@/components/GameCategories";
 import Promotions from "@/components/Promotions";
@@ -8,7 +9,7 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-20 md:pb-0">
       <Header />
       <main>
         <Hero />
@@ -18,6 +19,7 @@ const Index = () => {
         <Features />
       </main>
       <Footer />
+      <BottomNav />
     </div>
   );
 };
