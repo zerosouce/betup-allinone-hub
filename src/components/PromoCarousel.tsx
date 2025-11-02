@@ -31,7 +31,7 @@ const PromoCarousel = () => {
             {CAROUSEL_SLIDES.map((slide, index) => (
               <CarouselItem key={index}>
                 <div className={`relative h-64 md:h-80 rounded-xl overflow-hidden bg-gradient-to-r ${slide.bgColor}`}>
-                  <div className="absolute inset-0 grid md:grid-cols-2 gap-4">
+                  <div className="absolute inset-0 grid md:grid-cols-1 gap-4">
                     {/* Presenter Image Side */}
                     <div className="hidden md:flex items-end justify-center">
                       <img
