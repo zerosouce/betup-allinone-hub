@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative overflow-hidden bg-gradient-to-b from-black via-gray to-black py-20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDIxMiwgMTc1LCA1NSwgMC4xKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-20"></div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Badge */}
@@ -19,10 +19,8 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-gold bg-clip-text text-transparent leading-tight">
             BETUP168
           </h1>
-          
-          <p className="text-2xl md:text-3xl text-foreground font-medium">
-            คาสิโนออนไลน์ครบวงจร ทุกค่ายเกมดัง
-          </p>
+
+          <p className="text-2xl md:text-3xl text-foreground font-medium">คาสิโนออนไลน์ครบวงจร ทุกค่ายเกมดัง</p>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             บาคาร่า สล็อต รูเล็ต แทงบอล หวย | ฝาก-ถอน AUTO ไม่มีขั้นต่ำ | บริการตลอด 24 ชั่วโมง
@@ -30,12 +28,23 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button size="lg" className="bg-gradient-red text-white hover:opacity-90 shadow-red text-lg px-8 py-6 font-bold">
-              สมัครสมาชิก ฟรี
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6 font-bold">
-              ทดลองเล่นฟรี
-            </Button>
+            <Link to="/register">
+              <Button
+                size="lg"
+                className="bg-gradient-red text-white hover:opacity-90 shadow-red text-lg px-8 py-6 font-bold"
+              >
+                สมัครสมาชิก ฟรี
+              </Button>
+            </Link>
+            <Link to="/register">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6 font-bold"
+              >
+                ทดลองเล่นฟรี
+              </Button>
+            </Link>
           </div>
 
           {/* Features */}
