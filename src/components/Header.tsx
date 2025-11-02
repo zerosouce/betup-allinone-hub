@@ -132,7 +132,7 @@ const Header = () => {
                 className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
               >
                 <Gift className="h-4 w-4 mr-1" />
-                มีเครดิต
+                โปรโมชั่น
               </Button>
             </Link>
             <Link to="/login">
