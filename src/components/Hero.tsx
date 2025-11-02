@@ -17,9 +17,7 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <a href="/register">
-            <img src="https://sagame66q.com/wp-content/uploads/2025/06/sagame66.jpg"></img>
-          </a>
+
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-gold bg-clip-text text-transparent leading-tight">
             BETUP168
           </h1>
@@ -29,7 +27,9 @@ const Hero = () => {
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             บาคาร่า สล็อต รูเล็ต แทงบอล หวย | ฝาก-ถอน AUTO ไม่มีขั้นต่ำ | บริการตลอด 24 ชั่วโมง
           </p>
-
+          <Link to="/register">
+            <img src="https://sagame66q.com/wp-content/uploads/2025/06/sagame66.jpg"></img>
+          </Link>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Link to="/register">
