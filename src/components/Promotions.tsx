@@ -1,10 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import promoWelcome from "@/assets/promotions/promo-welcome.png";
 import promoCashback from "@/assets/promotions/promo-cashback.png";
 import promoVip from "@/assets/promotions/promo-vip.png";
 import promoDaily from "@/assets/promotions/promo-daily.png";
-import { Link } from "react-router-dom";
 
 const promotions = [
   {
