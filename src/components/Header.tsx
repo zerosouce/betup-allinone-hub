@@ -29,8 +29,8 @@ const Header = () => {
       <div className="w-full bg-gradient-to-b from-gray to-black py-4 md:hidden">
         <div className="container mx-auto px-4">
           {/* Logo & LINE ID */}
-          <div className="flex items-center justify-between mb-4 bg-[#1a3d3d] rounded-lg p-3">
-            <img src={logo} alt="BETUP168" className="h-80 w-auto" />
+          <div className="flex items-center justify-between mb-4 bg-gray rounded-lg p-3">
+            <img src={logo} alt="BETUP168" className="h-16 w-auto" />
             <div className="text-right">
               <span className="text-primary text-xs">LINE ID : </span>
               <span className="text-primary text-base font-bold">@betup168</span>
@@ -41,7 +41,7 @@ const Header = () => {
           <div className="grid grid-cols-3 gap-2">
             <Link
               to="/"
-              className="flex flex-col items-center justify-center gap-1.5 bg-[#1a3d3d] hover:bg-[#2a4d4d] transition-colors rounded-lg py-3 border border-[#2a4d4d]"
+              className="flex flex-col items-center justify-center gap-1.5 bg-gray hover:bg-muted transition-colors rounded-lg py-3 border border-border"
             >
               <Home className="h-5 w-5 text-primary" />
               <span className="text-foreground text-xs font-medium">หน้าหลัก</span>
@@ -49,7 +49,7 @@ const Header = () => {
 
             <Link
               to="/promotions"
-              className="flex flex-col items-center justify-center gap-1.5 bg-[#1a3d3d] hover:bg-[#2a4d4d] transition-colors rounded-lg py-3 border border-[#2a4d4d]"
+              className="flex flex-col items-center justify-center gap-1.5 bg-gray hover:bg-muted transition-colors rounded-lg py-3 border border-border"
             >
               <Gift className="h-5 w-5 text-primary" />
               <span className="text-foreground text-xs font-medium">โปรโมชั่น</span>
@@ -57,7 +57,7 @@ const Header = () => {
 
             <Link
               to="/login"
-              className="flex flex-col items-center justify-center gap-1.5 bg-[#1a3d3d] hover:bg-[#2a4d4d] transition-colors rounded-lg py-3 border border-[#2a4d4d]"
+              className="flex flex-col items-center justify-center gap-1.5 bg-gray hover:bg-muted transition-colors rounded-lg py-3 border border-border"
             >
               <LogIn className="h-5 w-5 text-primary" />
               <span className="text-foreground text-xs font-medium">เข้าสู่ระบบ</span>
@@ -73,7 +73,7 @@ const Header = () => {
 
             <Link
               to="/demo"
-              className="flex flex-col items-center justify-center gap-1.5 bg-[#1a3d3d] hover:bg-[#2a4d4d] transition-colors rounded-lg py-3 border border-[#2a4d4d]"
+              className="flex flex-col items-center justify-center gap-1.5 bg-gray hover:bg-muted transition-colors rounded-lg py-3 border border-border"
             >
               <Gamepad2 className="h-5 w-5 text-primary" />
               <span className="text-foreground text-xs font-medium">ทดลองเล่น</span>
@@ -81,7 +81,7 @@ const Header = () => {
 
             <Link
               to="/contact"
-              className="flex flex-col items-center justify-center gap-1.5 bg-[#1a3d3d] hover:bg-[#2a4d4d] transition-colors rounded-lg py-3 border border-[#2a4d4d]"
+              className="flex flex-col items-center justify-center gap-1.5 bg-gray hover:bg-muted transition-colors rounded-lg py-3 border border-border"
             >
               <Phone className="h-5 w-5 text-primary" />
               <span className="text-foreground text-xs font-medium">ติดต่อเรา</span>
@@ -91,7 +91,7 @@ const Header = () => {
       </div>
 
       {/* Desktop: Standard Header */}
-      <div className="hidden md:block bg-gradient-to-b from-[#2d5a5a] to-[#1a4040] sticky top-0 z-50">
+      <div className="hidden md:block bg-gradient-to-b from-gray to-black sticky top-0 z-50">
         <div className="container mx-auto px-4 py-6">
           {/* Top Section: Promo Box + Logo */}
           <div className="flex items-center justify-between mb-6">
@@ -103,7 +103,7 @@ const Header = () => {
 
             {/* Center: Large Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src={logo} alt="BETUP168" className="h-24 w-auto" />
+              <img src={logo} alt="BETUP168" className="h-32 w-auto" />
             </Link>
 
             {/* Right: Contact Info */}
@@ -119,7 +119,7 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
+                className="bg-gray border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
               >
                 <Home className="h-4 w-4 mr-1" />
                 หน้าหลัก
@@ -129,7 +129,7 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
+                className="bg-gray border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
               >
                 <Gift className="h-4 w-4 mr-1" />
                 โปรโมชั่น
@@ -139,7 +139,7 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
+                className="bg-gray border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
               >
                 <LogIn className="h-4 w-4 mr-1" />
                 เข้าสู่ระบบ
@@ -155,7 +155,7 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
+                className="bg-gray border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
               >
                 <Gamepad2 className="h-4 w-4 mr-1" />
                 ทดลองเล่น
@@ -165,7 +165,7 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
+                className="bg-gray border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
               >
                 <Phone className="h-4 w-4 mr-1" />
                 ติดต่อเรา
