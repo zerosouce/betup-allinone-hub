@@ -1,10 +1,40 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Smartphone, Zap, Shield, Headset, Percent, Trophy } from "lucide-react";
-import { FEATURES } from "@/config/content";
+import { Smartphone, CreditCard, Clock, Lock, Headphones, TrendingUp } from "lucide-react";
+
+const features = [
+  {
+    icon: Smartphone,
+    title: "เล่นผ่านมือถือ",
+    description: "รองรับทุกระบบปฏิบัติการ iOS และ Android ไม่ต้องดาวน์โหลด",
+  },
+  {
+    icon: CreditCard,
+    title: "ฝาก-ถอน AUTO",
+    description: "ระบบออโต้รวดเร็ว ไม่มีขั้นต่ำ ใช้เวลาไม่เกิน 30 วินาที",
+  },
+  {
+    icon: Clock,
+    title: "บริการ 24 ชั่วโมง",
+    description: "มีทีมงานคอยดูแลและให้บริการตลอด 24 ชั่วโมง",
+  },
+  {
+    icon: Lock,
+    title: "ปลอดภัย 100%",
+    description: "ระบบรักษาความปลอดภัยระดับธนาคาร มั่นคง น่าเชื่อถือ",
+  },
+  {
+    icon: Headphones,
+    title: "ซัพพอร์ตมืออาชีพ",
+    description: "ทีมงานมืออาชีพพร้อมให้คำปรึกษาและช่วยเหลือทุกปัญหา",
+  },
+  {
+    icon: TrendingUp,
+    title: "อัตราจ่ายสูง",
+    description: "อัตราการจ่ายเงินรางวัลสูงที่สุด จ่ายจริง จ่ายเต็ม",
+  },
+];
 
 const Features = () => {
-  const iconMap = { Smartphone, Zap, Shield, Headset, Percent, Trophy };
-
   return (
     <section className="py-20 bg-gradient-to-b from-gray to-black">
       <div className="container mx-auto px-4">
@@ -18,20 +48,27 @@ const Features = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {FEATURES.map((feature, index) => {
-            const Icon = iconMap[feature.icon as keyof typeof iconMap];
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
             return (
-              <Card key={index} className="group hover:scale-105 transition-transform duration-300 bg-card border-border hover:border-primary">
+              <Card 
+                key={index} 
+                className="group hover:shadow-gold transition-all duration-300 hover:scale-105 bg-card border-border hover:border-primary"
+              >
                 <CardContent className="p-6">
-                  <div className="h-14 w-14 mb-4 rounded-lg bg-gradient-to-br from-primary/20 to-gold-dark/20 flex items-center justify-center group-hover:shadow-gold transition-shadow">
-                    <Icon className="h-7 w-7 text-primary" />
+                  <div className="flex flex-col items-center text-center gap-4">
+                    <div className="h-16 w-16 rounded-full bg-gradient-gold flex items-center justify-center group-hover:animate-float">
+                      <Icon className="h-8 w-8 text-black" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                        {feature.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">
-                    {feature.description}
-                  </p>
                 </CardContent>
               </Card>
             );
