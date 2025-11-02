@@ -48,13 +48,31 @@ const games = [
     category: "สล็อต",
     image: slotFortuneTiger,
   },
+  {
+    title: "สล็อต Fortune Tiger",
+    description: "เกมยิงปลายอดนิยม แตกง่าย จ่ายจริง",
+    category: "สล็อต",
+    image: slotFortuneTiger,
+  },
+  {
+    title: "สล็อต Fortune Tiger",
+    description: "เกมยิงปลายอดนิยม แตกง่าย จ่ายจริง",
+    category: "สล็อต",
+    image: slotFortuneTiger,
+  },
+  {
+    title: "สล็อต Fortune Tiger",
+    description: "เกมยิงปลายอดนิยม แตกง่าย จ่ายจริง",
+    category: "สล็อต",
+    image: slotFortuneTiger,
+  },
 ];
 
 const Demo = () => {
   return (
     <div className="min-h-screen bg-background pb-20 md:pb-0">
       <Header />
-      
+
       <main className="py-12">
         <div className="container mx-auto px-4">
           {/* Hero Section */}
@@ -66,22 +84,20 @@ const Demo = () => {
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-gold bg-clip-text text-transparent mb-4">
               ทดลองเล่นเกม
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              เล่นฟรีทุกเกม ไม่ต้องฝากเงิน ไม่ต้องสมัครสมาชิก
-            </p>
+            <p className="text-lg md:text-xl text-muted-foreground">เล่นฟรีทุกเกม ไม่ต้องฝากเงิน ไม่ต้องสมัครสมาชิก</p>
           </div>
 
           {/* Games Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {games.map((game, index) => (
-              <Card 
-                key={index} 
+              <Card
+                key={index}
                 className="group hover:shadow-gold transition-all duration-300 hover:scale-105 bg-card border-border hover:border-primary overflow-hidden"
               >
                 <CardContent className="p-0">
                   <div className="h-48 relative overflow-hidden">
-                    <img 
-                      src={game.image} 
+                    <img
+                      src={game.image}
                       alt={game.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     />
@@ -96,9 +112,7 @@ const Demo = () => {
                     <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {game.title}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
-                      {game.description}
-                    </p>
+                    <p className="text-sm text-muted-foreground">{game.description}</p>
                     <Button className="w-full bg-gradient-red text-white hover:opacity-90">
                       <Play className="h-4 w-4 mr-2" />
                       ทดลองเล่นฟรี
