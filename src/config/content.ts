@@ -2,10 +2,10 @@
 
 export const promoCarouselConfig = {
   // ความสูงของ Slide (สามารถปรับได้)
-  // หน่วยเป็น pixels - แนะนำ: มือถือ 160-200, Tablet 240-320, Desktop 320-400
+  // หน่วยเป็น pixels - ปรับให้เหมาะกับภาพ 800x400 (aspect ratio 2:1)
   height: {
-    mobile: 200, // ความสูงบนมือถือ (px)
-    tablet: 240, // ความสูงบน tablet (px)
+    mobile: 180, // ความสูงบนมือถือ (px)
+    tablet: 280, // ความสูงบน tablet (px)
     desktop: 400, // ความสูงบนหน้าจอใหญ่ (px)
   },
 
