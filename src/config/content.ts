@@ -4,11 +4,11 @@ export const promoCarouselConfig = {
   // ความสูงของ Slide (สามารถปรับได้)
   // หน่วยเป็น pixels - แนะนำ: มือถือ 160-200, Tablet 240-320, Desktop 320-400
   height: {
-    mobile: 160,    // ความสูงบนมือถือ (px)
-    tablet: 240,    // ความสูงบน tablet (px)
-    desktop: 320,   // ความสูงบนหน้าจอใหญ่ (px)
+    mobile: 200, // ความสูงบนมือถือ (px)
+    tablet: 240, // ความสูงบน tablet (px)
+    desktop: 400, // ความสูงบนหน้าจอใหญ่ (px)
   },
-  
+
   // รูปภาพโปรโมชั่น
   slides: [
     {
@@ -16,7 +16,7 @@ export const promoCarouselConfig = {
       alt: "โปรโมชั่นโบนัส 100%",
     },
     {
-      image: "/src/assets/promo-2.jpg", 
+      image: "/src/assets/promo-2.jpg",
       alt: "สมัครสมาชิกใหม่รับเครดิตฟรี",
     },
     {
@@ -24,7 +24,7 @@ export const promoCarouselConfig = {
       alt: "ฝากถอนออโต้ 30 วินาที",
     },
   ],
-  
+
   // การตั้งค่าการเลื่อนอัตโนมัติ
   autoplay: {
     enabled: true,
