@@ -1,32 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, Zap, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
-import presenterImg from "@/assets/presenter.png";
-import goldExplosion from "@/assets/gold-explosion.png";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-black via-gray to-black py-12 md:py-20">
+    <section className="relative overflow-hidden bg-gradient-to-b from-black via-gray to-black py-20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDIxMiwgMTc1LCA1NSwgMC4xKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-20"></div>
-
-      {/* Presenter Image - Hidden on mobile, visible on desktop */}
-      <div className="hidden lg:block absolute left-0 bottom-0 z-10 w-[400px] xl:w-[450px] animate-fade-in">
-        <img 
-          src={presenterImg} 
-          alt="Casino Presenter" 
-          className="w-full h-auto object-contain drop-shadow-2xl"
-        />
-      </div>
-
-      {/* Gold Explosion Effect - Behind presenter */}
-      <div className="hidden lg:block absolute left-[200px] bottom-[100px] z-0 w-[500px] xl:w-[600px] animate-pulse opacity-70">
-        <img 
-          src={goldExplosion} 
-          alt="Gold Effect" 
-          className="w-full h-auto object-contain"
-        />
-      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
