@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import promoWelcome from "@/assets/promotions/promo-welcome.png";
 import promoCashback from "@/assets/promotions/promo-cashback.png";
 import promoVip from "@/assets/promotions/promo-vip.png";
@@ -81,7 +82,7 @@ const Promotions = () => {
           <Button size="lg" className="bg-gradient-red text-white hover:opacity-90 shadow-red text-lg px-12 py-6 font-bold">
             ดูโปรโมชั่นทั้งหมด
           </Button>
-          </>
+          <Link/>
         </div>
       </div>
     </section>
