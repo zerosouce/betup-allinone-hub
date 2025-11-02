@@ -1,24 +1,16 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { CAROUSEL_SLIDES } from "@/config/content";
+import presenter1 from "@/assets/presenter-1.jpg";
+import presenter2 from "@/assets/presenter-2.jpg";
+import presenter3 from "@/assets/presenter-3.jpg";
 
 const PromoCarousel = () => {
-  const promos = [
-    {
-      title: "โปรโมชั่นพิเศษ",
-      description: "รับโบนัสสูงสุด 100%",
-      bgColor: "from-red/80 to-red-dark/80",
-    },
-    {
-      title: "สมัครสมาชิกใหม่",
-      description: "รับเครดิตฟรีทันที",
-      bgColor: "from-primary/80 to-gold-dark/80",
-    },
-    {
-      title: "ฝากถอนออโต้",
-      description: "รวดเร็วภายใน 30 วินาที",
-      bgColor: "from-accent/80 to-destructive/80",
-    },
-  ];
+  const presenterImages = {
+    presenter1,
+    presenter2,
+    presenter3
+  };
 
   return (
     <div className="w-full bg-black py-6">
@@ -36,16 +28,31 @@ const PromoCarousel = () => {
           className="w-full"
         >
           <CarouselContent>
-            {promos.map((promo, index) => (
+            {CAROUSEL_SLIDES.map((slide, index) => (
               <CarouselItem key={index}>
-                <div className={`relative h-48 md:h-64 rounded-xl overflow-hidden bg-gradient-to-r ${promo.bgColor}`}>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-                    <h3 className="text-2xl md:text-4xl font-bold text-white mb-2">
-                      {promo.title}
-                    </h3>
-                    <p className="text-lg md:text-xl text-white/90">
-                      {promo.description}
-                    </p>
+                <div className={`relative h-64 md:h-80 rounded-xl overflow-hidden bg-gradient-to-r ${slide.bgColor}`}>
+                  <div className="absolute inset-0 grid md:grid-cols-2 gap-4">
+                    {/* Content Side */}
+                    <div className="flex flex-col items-center md:items-start justify-center text-center md:text-left p-6 md:p-12">
+                      <h3 className="text-3xl md:text-5xl font-bold text-white mb-2 drop-shadow-lg">
+                        {slide.title}
+                      </h3>
+                      <p className="text-xl md:text-3xl text-white/95 font-semibold mb-1 drop-shadow-md">
+                        {slide.subtitle}
+                      </p>
+                      <p className="text-lg md:text-2xl text-white/90 drop-shadow-md">
+                        {slide.description}
+                      </p>
+                    </div>
+                    
+                    {/* Presenter Image Side */}
+                    <div className="hidden md:flex items-end justify-center">
+                      <img 
+                        src={presenterImages[slide.imageKey as keyof typeof presenterImages]} 
+                        alt={slide.title}
+                        className="h-full w-auto object-contain object-bottom"
+                      />
+                    </div>
                   </div>
                 </div>
               </CarouselItem>
