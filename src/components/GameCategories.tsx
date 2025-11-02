@@ -1,39 +1,44 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Dices, Gamepad2, Trophy, Target, Rocket, Fish } from "lucide-react";
+import baccaratImg from "@/assets/categories/baccarat.png";
+import slotImg from "@/assets/categories/slot.png";
+import footballImg from "@/assets/categories/football.png";
+import rouletteImg from "@/assets/categories/roulette.png";
+import lotteryImg from "@/assets/categories/lottery.png";
+import fishingImg from "@/assets/categories/fishing.png";
 
 const categories = [
   {
-    icon: Dices,
+    image: baccaratImg,
     title: "บาคาร่าออนไลน์",
     description: "SA Gaming, Sexy Baccarat, WM Casino",
     color: "from-red to-red-dark",
   },
   {
-    icon: Gamepad2,
+    image: slotImg,
     title: "สล็อตออนไลน์",
     description: "PG Soft, Joker Gaming, Pragmatic Play",
     color: "from-gold to-gold-dark",
   },
   {
-    icon: Trophy,
+    image: footballImg,
     title: "แทงบอลออนไลน์",
     description: "พรีเมียร์ลีก, ลาลีกา, ไทยลีก",
     color: "from-red to-red-dark",
   },
   {
-    icon: Target,
+    image: rouletteImg,
     title: "รูเล็ต & ไหโล",
     description: "Live Casino แบบเรียลไทม์",
     color: "from-gold to-gold-dark",
   },
   {
-    icon: Rocket,
+    image: lotteryImg,
     title: "หวยออนไลน์",
     description: "หวยไทย, หวยลาว, หวยหุ้น",
     color: "from-red to-red-dark",
   },
   {
-    icon: Fish,
+    image: fishingImg,
     title: "ยิงปลา",
     description: "เกมส์ยิงปลา 3D กราฟิกสวย",
     color: "from-gold to-gold-dark",
@@ -55,7 +60,6 @@ const GameCategories = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((category, index) => {
-            const Icon = category.icon;
             return (
               <Card 
                 key={index} 
@@ -63,8 +67,12 @@ const GameCategories = () => {
               >
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
-                    <div className={`h-16 w-16 rounded-xl bg-gradient-to-br ${category.color} flex items-center justify-center flex-shrink-0 group-hover:animate-float`}>
-                      <Icon className="h-8 w-8 text-white" />
+                    <div className="h-16 w-16 rounded-xl overflow-hidden flex-shrink-0 group-hover:animate-float">
+                      <img 
+                        src={category.image} 
+                        alt={category.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
