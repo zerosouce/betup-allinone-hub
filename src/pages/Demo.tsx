@@ -4,37 +4,49 @@ import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Gamepad2, Play } from "lucide-react";
+import baccaratSa from "@/assets/games/baccarat-sa.jpg";
+import slotSweetBonanza from "@/assets/games/slot-sweet-bonanza.jpg";
+import baccaratSexy from "@/assets/games/baccarat-sexy.jpg";
+import slotGatesOlympus from "@/assets/games/slot-gates-olympus.jpg";
+import rouletteLive from "@/assets/games/roulette-live.jpg";
+import slotFortuneTiger from "@/assets/games/slot-fortune-tiger.jpg";
 
 const games = [
   {
     title: "บาคาร่า SA Gaming",
     description: "เกมบาคาร่ายอดนิยม กราฟิกสวย เดิมพันเริ่มต้น 10 บาท",
     category: "บาคาร่า",
+    image: baccaratSa,
   },
   {
     title: "สล็อต Sweet Bonanza",
     description: "สล็อตแตกง่าย แจ็คพอตแตกบ่อย",
     category: "สล็อต",
+    image: slotSweetBonanza,
   },
   {
     title: "บาคาร่า Sexy Gaming",
     description: "ดีลเลอร์สาวสวย บรรยากาศคาสิโนแท้",
     category: "บาคาร่า",
+    image: baccaratSexy,
   },
   {
     title: "สล็อต Gates of Olympus",
     description: "สล็อต PG Soft โบนัสแตกหนัก",
     category: "สล็อต",
+    image: slotGatesOlympus,
   },
   {
     title: "รูเล็ต Live Casino",
     description: "รูเล็ตสดแบบเรียลไทม์",
     category: "รูเล็ต",
+    image: rouletteLive,
   },
   {
     title: "สล็อต Fortune Tiger",
     description: "เกมยิงปลายอดนิยม แตกง่าย จ่ายจริง",
     category: "สล็อต",
+    image: slotFortuneTiger,
   },
 ];
 
@@ -67,9 +79,13 @@ const Demo = () => {
                 className="group hover:shadow-gold transition-all duration-300 hover:scale-105 bg-card border-border hover:border-primary overflow-hidden"
               >
                 <CardContent className="p-0">
-                  <div className="h-48 bg-gradient-to-br from-gray to-black flex items-center justify-center relative overflow-hidden">
-                    <Gamepad2 className="h-20 w-20 text-primary/50 group-hover:scale-110 transition-transform" />
-                    <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors"></div>
+                  <div className="h-48 relative overflow-hidden">
+                    <img 
+                      src={game.image} 
+                      alt={game.title}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
                     <div className="absolute top-4 right-4">
                       <span className="px-3 py-1 rounded-full bg-gradient-gold text-black text-xs font-bold">
                         {game.category}
