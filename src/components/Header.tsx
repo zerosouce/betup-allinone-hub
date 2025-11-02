@@ -1,9 +1,12 @@
 import logo from "@/assets/logo.png";
 import { Home, Gift, LogIn, UserPlus, Gamepad2, Phone } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
+  const location = useLocation();
+  const isActive = (path: string) => location.pathname === path;
+
   return (
     <header className="bg-black">
       {/* Mobile Only: LINE@ Bar */}
@@ -41,26 +44,38 @@ const Header = () => {
           <div className="grid grid-cols-3 gap-2">
             <Link
               to="/"
-              className="flex flex-col items-center justify-center gap-1.5 bg-gray hover:bg-muted transition-colors rounded-lg py-3 border border-border"
+              className={`flex flex-col items-center justify-center gap-1.5 transition-colors rounded-lg py-3 border ${
+                isActive('/') 
+                  ? 'bg-primary text-black border-primary' 
+                  : 'bg-gray hover:bg-muted border-border'
+              }`}
             >
-              <Home className="h-5 w-5 text-primary" />
-              <span className="text-foreground text-xs font-medium">หน้าหลัก</span>
+              <Home className={`h-5 w-5 ${isActive('/') ? 'text-black' : 'text-primary'}`} />
+              <span className={`text-xs font-medium ${isActive('/') ? 'text-black' : 'text-foreground'}`}>หน้าหลัก</span>
             </Link>
 
             <Link
               to="/promotions"
-              className="flex flex-col items-center justify-center gap-1.5 bg-gray hover:bg-muted transition-colors rounded-lg py-3 border border-border"
+              className={`flex flex-col items-center justify-center gap-1.5 transition-colors rounded-lg py-3 border ${
+                isActive('/promotions') 
+                  ? 'bg-primary text-black border-primary' 
+                  : 'bg-gray hover:bg-muted border-border'
+              }`}
             >
-              <Gift className="h-5 w-5 text-primary" />
-              <span className="text-foreground text-xs font-medium">โปรโมชั่น</span>
+              <Gift className={`h-5 w-5 ${isActive('/promotions') ? 'text-black' : 'text-primary'}`} />
+              <span className={`text-xs font-medium ${isActive('/promotions') ? 'text-black' : 'text-foreground'}`}>โปรโมชั่น</span>
             </Link>
 
             <Link
               to="/login"
-              className="flex flex-col items-center justify-center gap-1.5 bg-gray hover:bg-muted transition-colors rounded-lg py-3 border border-border"
+              className={`flex flex-col items-center justify-center gap-1.5 transition-colors rounded-lg py-3 border ${
+                isActive('/login') 
+                  ? 'bg-primary text-black border-primary' 
+                  : 'bg-gray hover:bg-muted border-border'
+              }`}
             >
-              <LogIn className="h-5 w-5 text-primary" />
-              <span className="text-foreground text-xs font-medium">เข้าสู่ระบบ</span>
+              <LogIn className={`h-5 w-5 ${isActive('/login') ? 'text-black' : 'text-primary'}`} />
+              <span className={`text-xs font-medium ${isActive('/login') ? 'text-black' : 'text-foreground'}`}>เข้าสู่ระบบ</span>
             </Link>
 
             <Link
@@ -73,18 +88,26 @@ const Header = () => {
 
             <Link
               to="/demo"
-              className="flex flex-col items-center justify-center gap-1.5 bg-gray hover:bg-muted transition-colors rounded-lg py-3 border border-border"
+              className={`flex flex-col items-center justify-center gap-1.5 transition-colors rounded-lg py-3 border ${
+                isActive('/demo') 
+                  ? 'bg-primary text-black border-primary' 
+                  : 'bg-gray hover:bg-muted border-border'
+              }`}
             >
-              <Gamepad2 className="h-5 w-5 text-primary" />
-              <span className="text-foreground text-xs font-medium">ทดลองเล่น</span>
+              <Gamepad2 className={`h-5 w-5 ${isActive('/demo') ? 'text-black' : 'text-primary'}`} />
+              <span className={`text-xs font-medium ${isActive('/demo') ? 'text-black' : 'text-foreground'}`}>ทดลองเล่น</span>
             </Link>
 
             <Link
               to="/contact"
-              className="flex flex-col items-center justify-center gap-1.5 bg-gray hover:bg-muted transition-colors rounded-lg py-3 border border-border"
+              className={`flex flex-col items-center justify-center gap-1.5 transition-colors rounded-lg py-3 border ${
+                isActive('/contact') 
+                  ? 'bg-primary text-black border-primary' 
+                  : 'bg-gray hover:bg-muted border-border'
+              }`}
             >
-              <Phone className="h-5 w-5 text-primary" />
-              <span className="text-foreground text-xs font-medium">ติดต่อเรา</span>
+              <Phone className={`h-5 w-5 ${isActive('/contact') ? 'text-black' : 'text-primary'}`} />
+              <span className={`text-xs font-medium ${isActive('/contact') ? 'text-black' : 'text-foreground'}`}>ติดต่อเรา</span>
             </Link>
           </div>
         </div>
@@ -119,7 +142,11 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-gray border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
+                className={`min-w-[120px] ${
+                  isActive('/') 
+                    ? 'bg-primary text-black border-primary' 
+                    : 'bg-gray border-primary text-foreground hover:bg-primary hover:text-black'
+                }`}
               >
                 <Home className="h-4 w-4 mr-1" />
                 หน้าหลัก
@@ -129,7 +156,11 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-gray border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
+                className={`min-w-[120px] ${
+                  isActive('/promotions') 
+                    ? 'bg-primary text-black border-primary' 
+                    : 'bg-gray border-primary text-foreground hover:bg-primary hover:text-black'
+                }`}
               >
                 <Gift className="h-4 w-4 mr-1" />
                 โปรโมชั่น
@@ -139,7 +170,11 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-gray border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
+                className={`min-w-[120px] ${
+                  isActive('/login') 
+                    ? 'bg-primary text-black border-primary' 
+                    : 'bg-gray border-primary text-foreground hover:bg-primary hover:text-black'
+                }`}
               >
                 <LogIn className="h-4 w-4 mr-1" />
                 เข้าสู่ระบบ
@@ -155,7 +190,11 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-gray border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
+                className={`min-w-[120px] ${
+                  isActive('/demo') 
+                    ? 'bg-primary text-black border-primary' 
+                    : 'bg-gray border-primary text-foreground hover:bg-primary hover:text-black'
+                }`}
               >
                 <Gamepad2 className="h-4 w-4 mr-1" />
                 ทดลองเล่น
@@ -165,7 +204,11 @@ const Header = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="bg-gray border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]"
+                className={`min-w-[120px] ${
+                  isActive('/contact') 
+                    ? 'bg-primary text-black border-primary' 
+                    : 'bg-gray border-primary text-foreground hover:bg-primary hover:text-black'
+                }`}
               >
                 <Phone className="h-4 w-4 mr-1" />
                 ติดต่อเรา
