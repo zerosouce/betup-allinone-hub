@@ -73,48 +73,70 @@ const Header = () => {
       </div>
 
       {/* Desktop: Standard Header */}
-      <div className="hidden md:block border-b border-border bg-black/95 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-4">
-            <div className="flex items-center gap-8">
-              <Link to="/">
-                <img src={logo} alt="BETUP168" className="h-12 w-auto" />
-              </Link>
-              
-              <nav className="flex items-center gap-6">
-                <Link to="/" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  หน้าหลัก
-                </Link>
-                <Link to="/promotions" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  โปรโมชั่น
-                </Link>
-                <Link to="/demo" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  ทดลองเล่น
-                </Link>
-                <Link to="/contact" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-                  ติดต่อเรา
-                </Link>
-              </nav>
+      <div className="hidden md:block bg-gradient-to-b from-[#2d5a5a] to-[#1a4040] sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-6">
+          {/* Top Section: Promo Box + Logo */}
+          <div className="flex items-center justify-between mb-6">
+            {/* Left: Auto Deposit/Withdraw Box */}
+            <div className="border-4 border-primary bg-black px-6 py-4 rounded-md">
+              <div className="text-primary text-lg font-bold leading-tight">
+                ระบบฝาก-ถอน ออโต้
+              </div>
+              <div className="text-primary text-base font-medium">
+                30 วินาทีเท่านั้น
+              </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <Link to="/login">
-                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  เข้าสู่ระบบ
-                </Button>
-              </Link>
-              <Link to="/register">
-                <Button size="sm" className="bg-gradient-red text-white hover:opacity-90 shadow-red">
-                  สมัครสมาชิก
-                </Button>
-              </Link>
+            {/* Center: Large Logo */}
+            <Link to="/" className="flex-shrink-0">
+              <img src={logo} alt="BETUP168" className="h-24 w-auto" />
+            </Link>
+
+            {/* Right: Contact Info */}
+            <div className="text-right space-y-1">
+              <div className="text-[#06C755] text-sm font-medium">LINE: @betup168</div>
+              <div className="text-[#0088cc] text-sm font-medium">Telegram: @betup168</div>
             </div>
           </div>
 
-          <div className="border-t border-border py-2 flex items-center justify-center gap-4 text-sm">
-            <span className="text-muted-foreground">ติดต่อเรา:</span>
-            <span className="text-[#06C755]">LINE: @betup168</span>
-            <span className="text-[#0088cc]">Telegram: @betup168</span>
+          {/* Bottom Section: Navigation Menu */}
+          <div className="flex items-center justify-center gap-3">
+            <Link to="/">
+              <Button variant="outline" size="sm" className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]">
+                <Home className="h-4 w-4 mr-1" />
+                หน้าหลัก
+              </Button>
+            </Link>
+            <Link to="/promotions">
+              <Button variant="outline" size="sm" className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]">
+                <Gift className="h-4 w-4 mr-1" />
+                มีเครดิต
+              </Button>
+            </Link>
+            <Link to="/login">
+              <Button variant="outline" size="sm" className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]">
+                <LogIn className="h-4 w-4 mr-1" />
+                เข้าสู่ระบบ
+              </Button>
+            </Link>
+            <Link to="/register">
+              <Button size="sm" className="bg-gradient-red text-white hover:opacity-90 shadow-red min-w-[120px]">
+                <UserPlus className="h-4 w-4 mr-1" />
+                สมัครสมาชิก
+              </Button>
+            </Link>
+            <Link to="/demo">
+              <Button variant="outline" size="sm" className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]">
+                <Gamepad2 className="h-4 w-4 mr-1" />
+                ทดลองเล่น
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="outline" size="sm" className="bg-black border-primary text-foreground hover:bg-primary hover:text-black min-w-[120px]">
+                <Phone className="h-4 w-4 mr-1" />
+                ติดต่อเรา
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
