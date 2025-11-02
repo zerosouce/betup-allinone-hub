@@ -17,7 +17,9 @@ const Hero = () => {
           </div>
 
           {/* Main Heading */}
-          <img src="https://sagame66q.com/wp-content/uploads/2025/06/sagame66.jpg"></img>
+          <a href="/register">
+            <img src="https://sagame66q.com/wp-content/uploads/2025/06/sagame66.jpg"></img>
+          </a>
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-gold bg-clip-text text-transparent leading-tight">
             BETUP168
           </h1>
