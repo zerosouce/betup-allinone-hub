@@ -4,6 +4,7 @@ import promoWelcome from "@/assets/promotions/promo-welcome.png";
 import promoCashback from "@/assets/promotions/promo-cashback.png";
 import promoVip from "@/assets/promotions/promo-vip.png";
 import promoDaily from "@/assets/promotions/promo-daily.png";
+import { Link } from "react-router-dom";
 
 const promotions = [
   {
@@ -77,9 +78,11 @@ const Promotions = () => {
         </div>
 
         <div className="text-center">
+          <Link to="/promotions">
           <Button size="lg" className="bg-gradient-red text-white hover:opacity-90 shadow-red text-lg px-12 py-6 font-bold">
             ดูโปรโมชั่นทั้งหมด
           </Button>
+          </>
         </div>
       </div>
     </section>
