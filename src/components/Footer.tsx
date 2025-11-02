@@ -1,67 +1,61 @@
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import { FOOTER_CONTENT, SITE_CONFIG } from "@/config/content";
 
 const Footer = () => {
   return (
-    <footer className="bg-black border-t border-border py-12" id="contact">
+    <footer className="bg-gradient-to-b from-gray to-black border-t border-border py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
-          <div className="space-y-4">
-            <img src={logo} alt="BETUP168" className="h-16 w-auto" />
-            <p className="text-sm text-muted-foreground">
-              เว็บคาสิโนออนไลน์อันดับ 1 ของไทย ให้บริการตลอด 24 ชั่วโมง
+          <div className="col-span-1 md:col-span-2">
+            <img src={logo} alt={SITE_CONFIG.siteName} className="h-12 w-auto mb-4" />
+            <p className="text-muted-foreground text-sm mb-4">
+              {FOOTER_CONTENT.about.description}
             </p>
+            <div className="flex gap-4">
+              <div className="px-4 py-2 bg-[#06C755] rounded-lg">
+                <span className="text-white text-sm font-bold">LINE: {SITE_CONFIG.contact.line}</span>
+              </div>
+              <div className="px-4 py-2 bg-[#0088cc] rounded-lg">
+                <span className="text-white text-sm font-bold">Telegram: {SITE_CONFIG.contact.telegram}</span>
+              </div>
+            </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold text-foreground mb-4">เมนูหลัก</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#home" className="hover:text-primary transition-colors">หน้าหลัก</a></li>
-              <li><a href="#promotions" className="hover:text-primary transition-colors">โปรโมชั่น</a></li>
-              <li><a href="#demo" className="hover:text-primary transition-colors">ทดลองเล่น</a></li>
-              <li><a href="#contact" className="hover:text-primary transition-colors">ติดต่อเรา</a></li>
+            <h3 className="text-foreground font-bold mb-4">ลิงก์ด่วน</h3>
+            <ul className="space-y-2">
+              {FOOTER_CONTENT.quickLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Games */}
           <div>
-            <h3 className="text-lg font-bold text-foreground mb-4">เกมยอดนิยม</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#" className="hover:text-primary transition-colors">บาคาร่าออนไลน์</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">สล็อตออนไลน์</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">แทงบอลออนไลน์</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">หวยออนไลน์</a></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-lg font-bold text-foreground mb-4">ติดต่อเรา</h3>
-            <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>LINE: <span className="text-[#06C755]">@betup168</span></li>
-              <li>Telegram: <span className="text-[#0088cc]">@betup168</span></li>
-              <li>Email: support@betup168.com</li>
-              <li>บริการตลอด 24 ชั่วโมง</li>
+            <h3 className="text-foreground font-bold mb-4">เกมส์</h3>
+            <ul className="space-y-2">
+              {FOOTER_CONTENT.gameLinks.map((link, index) => (
+                <li key={index}>
+                  <Link to={link.path} className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="border-t border-border pt-8 text-center">
-          <p className="text-sm text-muted-foreground mb-2">
-            © 2024 BETUP168.COM - All Rights Reserved
+          <p className="text-muted-foreground text-sm mb-2">
+            {FOOTER_CONTENT.copyright}
           </p>
-          <p className="text-xs text-muted-foreground">
-            เว็บพนันออนไลน์ที่ดีที่สุด ฝาก-ถอนออโต้ รวดเร็วทันใจ ปลอดภัย 100%
+          <p className="text-muted-foreground text-xs">
+            {FOOTER_CONTENT.legal}
           </p>
-          <div className="flex justify-center gap-4 mt-4 text-xs text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">นโยบายความเป็นส่วนตัว</a>
-            <span>|</span>
-            <a href="#" className="hover:text-primary transition-colors">เงื่อนไขการใช้งาน</a>
-            <span>|</span>
-            <a href="#" className="hover:text-primary transition-colors">เกี่ยวกับเรา</a>
-          </div>
         </div>
       </div>
     </footer>
