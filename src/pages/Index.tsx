@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import BottomNav from "@/components/BottomNav";
+import PromoCarousel from "@/components/PromoCarousel";
 import Hero from "@/components/Hero";
 import GameCategories from "@/components/GameCategories";
 import Promotions from "@/components/Promotions";
@@ -11,6 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background pb-20 md:pb-0">
       <Header />
+      <PromoCarousel />
       <main>
         <Hero />
         <GameCategories />
