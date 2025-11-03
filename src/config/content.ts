@@ -3,10 +3,10 @@
 // ตั้งค่าขนาดโลโก้ (สามารถปรับได้ง่าย ๆ)
 export const logoConfig = {
   // ขนาดโลโก้บนมือถือ (h-16 = 64px, h-20 = 80px, h-24 = 96px)
-  mobile: "h-16", // แนะนำ: h-12 ถึง h-20
+  mobile: "h-20", // แนะนำ: h-12 ถึง h-20
   
   // ขนาดโลโก้บนหน้าจอใหญ่ (h-24 = 96px, h-32 = 128px, h-40 = 160px)
-  desktop: "h-32", // แนะนำ: h-24 ถึง h-40
+  desktop: "h-40", // แนะนำ: h-24 ถึง h-40
 };
 
 export const promoCarouselConfig = {
