@@ -2,6 +2,7 @@ import logo from "@/assets/logo.png";
 import { Home, Gift, LogIn, UserPlus, Gamepad2, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { logoConfig } from "@/config/content";
 
 const Header = () => {
   const location = useLocation();
@@ -33,7 +34,7 @@ const Header = () => {
         <div className="container mx-auto px-4">
           {/* Logo & LINE ID */}
           <div className="flex items-center justify-between mb-4 bg-gray rounded-lg p-3">
-            <img src={logo} alt="BETUP168" className="h-16 w-auto" />
+            <img src={logo} alt="BETUP168" className={`${logoConfig.mobile} w-auto`} />
             <div className="text-right">
               <span className="text-primary text-xs">LINE ID : </span>
               <span className="text-primary text-base font-bold">@betup168</span>
@@ -126,7 +127,7 @@ const Header = () => {
 
             {/* Center: Large Logo */}
             <Link to="/" className="flex-shrink-0">
-              <img src={logo} alt="BETUP168" className="h-32 w-auto" />
+              <img src={logo} alt="BETUP168" className={`${logoConfig.desktop} w-auto`} />
             </Link>
 
             {/* Right: Contact Info */}
