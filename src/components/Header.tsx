@@ -122,7 +122,7 @@ const Header = () => {
             {/* Left: Auto Deposit/Withdraw Box */}
             <div className="border-4 border-primary bg-black px-6 py-4 rounded-md">
               <div className="text-primary text-lg font-bold leading-tight">ระบบฝาก-ถอน ออโต้</div>
-              <div className="text-primary text-base font-medium">30 วินาทีเท่านั้น</div>
+              <div className="text-primary text-base font-medium">10 วินาทีเท่านั้น</div>
             </div>
 
             {/* Center: Large Logo */}
