@@ -9,27 +9,27 @@ import promoDaily from "@/assets/promotions/promo-daily.png";
 const promotions = [
   {
     image: promoWelcome,
-    title: "โบนัสสมาชิกใหม่",
-    description: "รับโบนัสทันที 100%",
-    amount: "สูงสุด 10,000 บาท",
-  },
-  {
-    image: promoCashback,
-    title: "คืนยอดเสีย",
-    description: "คืนยอดเสียทุกสัปดาห์",
-    amount: "สูงสุด 10%",
-  },
-  {
-    image: promoVip,
-    title: "โปรสมาชิก VIP",
-    description: "สิทธิพิเศษสำหรับ VIP",
-    amount: "โบนัสถึง 50,000",
+    title: "สมาชิกใหม่รับโบนัส 100%",
+    description: "รับโบนัสสูงสุด 100 บาท",
+    amount: "เทิร์น 20 เท่า",
   },
   {
     image: promoDaily,
-    title: "ฝากทุกวัน",
-    description: "รับโบนัสฝากทุกครั้ง",
-    amount: "สูงสุด 5%",
+    title: "ฝากครั้งแรกของวันรับโบนัส 20%",
+    description: "รับโบนัสสูงสุด 1,000 บาท",
+    amount: "เทิร์น 20 เท่า",
+  },
+  {
+    image: promoCashback,
+    title: "คืนยอดเสีย 3% ทุกวัน",
+    description: "สูงสุด 1,000 บาท",
+    amount: "เทิร์น 1 เท่า",
+  },
+  {
+    image: promoVip,
+    title: "แนะนำเพื่อนรับคอมมิชชั่น 0.8%",
+    description: "รับค่าคอมมิชชั่นจากยอดเล่นของเพื่อน",
+    amount: "เทิร์น 1 เท่า",
   },
 ];
 
