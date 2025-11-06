@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Sparkles, Zap, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Hero = () => {
-  return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-black via-gray to-black py-20">
+  return <section className="relative overflow-hidden bg-gradient-to-b from-black via-gray to-black py-20">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48cGF0dGVybiBpZD0iZ3JpZCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBwYXR0ZXJuVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSJyZ2JhKDIxMiwgMTc1LCA1NSwgMC4xKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-20"></div>
 
@@ -28,24 +26,17 @@ const Hero = () => {
             บาคาร่า สล็อต รูเล็ต แทงบอล หวย | ฝาก-ถอน AUTO ไม่มีขั้นต่ำ | บริการตลอด 24 ชั่วโมง
           </p>
           <Link to="/register">
-            <img src="https://sagame66q.com/wp-content/uploads/2025/06/sagame66.jpg"></img>
+            
           </Link>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Link to="/register">
-              <Button
-                size="lg"
-                className="bg-gradient-red text-white hover:opacity-90 shadow-red text-lg px-8 py-6 font-bold"
-              >
+              <Button size="lg" className="bg-gradient-red text-white hover:opacity-90 shadow-red text-lg px-8 py-6 font-bold">
                 สมัครสมาชิก ฟรี
               </Button>
             </Link>
             <Link to="/register">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6 font-bold"
-              >
+              <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6 font-bold">
                 ทดลองเล่นฟรี
               </Button>
             </Link>
@@ -79,8 +70,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
