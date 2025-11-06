@@ -48,7 +48,7 @@ const categories = [
 
 const GameCategories = () => {
   return (
-    <section className="py-20 bg-background" id="home">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-gold bg-clip-text text-transparent mb-4">

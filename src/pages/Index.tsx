@@ -15,9 +15,9 @@ const Index = () => {
       <PromoCarousel />
       <main>
         <Hero />
-        <GameCategories />
-        <Promotions />
         <Providers />
+        <Promotions />
+        <GameCategories />
         <Features />
       </main>
       <Footer />
