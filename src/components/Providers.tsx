@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { Link } from "react-router-dom";
 import bannerMain from "@/assets/providers/banner-main.webp";
 import bannerPP from "@/assets/providers/banner-pp.webp";
 import bannerMG from "@/assets/providers/banner-mg.webp";
@@ -107,9 +108,11 @@ const Providers = () => {
 
         {/* View All Button */}
         <div className="text-center mb-12">
-          <Button size="lg" className="bg-gold hover:bg-gold-dark text-black font-semibold px-8">
-            ดูทั้งหมด
-          </Button>
+          <Link to="/providers">
+            <Button size="lg" className="bg-gold hover:bg-gold-dark text-black font-semibold px-8">
+              ดูทั้งหมด
+            </Button>
+          </Link>
         </div>
 
         {/* Provider Grid */}
