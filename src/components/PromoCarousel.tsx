@@ -40,30 +40,26 @@ const PromoCarousel = () => {
           <CarouselContent>
             {promos.map((promo, index) => (
               <CarouselItem key={index}>
-                <div 
-                  className="relative w-full overflow-hidden"
-                  style={{
-                    height: `${height.mobile}px`,
-                    width: '100%',
-                  }}
-                >
-                  <style>
-                    {`
-                      @media (min-width: 768px) {
-                        .carousel-container-${index} {
-                          height: ${height.desktop}px !important;
-                          width: 1000px !important;
-                        }
+                <style>
+                  {`
+                    .carousel-slide-${index} {
+                      height: ${height.mobile}px;
+                      width: 100%;
+                    }
+                    @media (min-width: 768px) {
+                      .carousel-slide-${index} {
+                        height: ${height.desktop}px;
+                        width: 1000px;
                       }
-                    `}
-                  </style>
-                  <div className={`carousel-container-${index} w-full h-full`}>
-                    <img 
-                      src={promo.image} 
-                      alt={promo.alt}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                    }
+                  `}
+                </style>
+                <div className={`carousel-slide-${index} relative overflow-hidden`}>
+                  <img 
+                    src={promo.image} 
+                    alt={promo.alt}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </CarouselItem>
             ))}
