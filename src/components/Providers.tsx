@@ -9,6 +9,8 @@ import kingmaker from "@/assets/providers/kingmaker.png";
 import wmCasino from "@/assets/providers/wm-casino.png";
 import microgaming from "@/assets/providers/microgaming.png";
 import dreamgaming from "@/assets/providers/dreamgaming.png";
+import sexyGaming from "@/assets/providers/sexy-gaming.png";
+import saGaming from "@/assets/providers/sa-gaming.png";
 
 const providers = [
   { name: "Jili", image: jili },
@@ -21,6 +23,8 @@ const providers = [
   { name: "WM Casino", image: wmCasino },
   { name: "Microgaming", image: microgaming },
   { name: "Dream Gaming", image: dreamgaming },
+  { name: "Sexy Gaming", image: sexyGaming },
+  { name: "SA Gaming", image: saGaming },
 ];
 
 const Providers = () => {
