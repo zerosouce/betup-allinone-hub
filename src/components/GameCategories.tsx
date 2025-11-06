@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import baccaratImg from "@/assets/categories/baccarat.png";
 import slotImg from "@/assets/categories/slot.png";
 import footballImg from "@/assets/categories/football.png";
@@ -63,26 +64,27 @@ const GameCategories = () => {
             return (
               <Card 
                 key={index} 
-                className="group hover:shadow-gold transition-all duration-300 hover:scale-105 cursor-pointer bg-card border-border hover:border-primary"
+                className="group relative overflow-hidden hover:shadow-gold transition-all duration-500 hover:scale-105 cursor-pointer border-2 border-border hover:border-primary h-[280px]"
               >
-                <CardContent className="p-6">
-                  <div className="flex items-start gap-4">
-                    <div className="h-16 w-16 rounded-xl overflow-hidden flex-shrink-0 group-hover:animate-float">
-                      <img 
-                        src={category.image} 
-                        alt={category.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                        {category.title}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {category.description}
-                      </p>
-                    </div>
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url(${category.image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <CardContent className="relative h-full p-6 flex flex-col justify-end">
+                  <div className="mb-4">
+                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-gold transition-colors">
+                      {category.title}
+                    </h3>
+                    <p className="text-sm text-white/80">
+                      {category.description}
+                    </p>
                   </div>
+                  <Button 
+                    className="bg-gold hover:bg-gold-dark text-black font-semibold w-32 transition-all duration-300 group-hover:w-36"
+                  >
+                    เข้าเล่น
+                  </Button>
                 </CardContent>
               </Card>
             );
