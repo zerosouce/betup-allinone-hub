@@ -60,11 +60,11 @@ const PromoCarousel = () => {
                       }
                     `}
                   </style>
-                  <div className={`carousel-height-${index} w-full h-full bg-background`}>
+                  <div className={`carousel-height-${index} w-full h-full`}>
                     <img 
                       src={promo.image} 
                       alt={promo.alt}
-                      className="w-full h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
