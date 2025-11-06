@@ -1,30 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
-import saGaming from "@/assets/providers/sa-gaming.png";
-import sexyBaccarat from "@/assets/providers/sexy-baccarat.png";
-import wmCasino from "@/assets/providers/wm-casino.png";
-import prettyGaming from "@/assets/providers/pretty-gaming.png";
+import jili from "@/assets/providers/jili.png";
 import pgSoft from "@/assets/providers/pg-soft.png";
+import yggdrasil from "@/assets/providers/yggdrasil.png";
 import jokerGaming from "@/assets/providers/joker-gaming.png";
 import pragmaticPlay from "@/assets/providers/pragmatic-play.png";
-import spadegaming from "@/assets/providers/spadegaming.png";
-import jili from "@/assets/providers/jili.png";
 import cq9 from "@/assets/providers/cq9.png";
-import habanero from "@/assets/providers/habanero.png";
-import redTiger from "@/assets/providers/red-tiger.png";
+import kingmaker from "@/assets/providers/kingmaker.png";
+import wmCasino from "@/assets/providers/wm-casino.png";
+import microgaming from "@/assets/providers/microgaming.png";
+import dreamgaming from "@/assets/providers/dreamgaming.png";
 
 const providers = [
-  { name: "SA Gaming", image: saGaming },
-  { name: "Sexy Baccarat", image: sexyBaccarat },
-  { name: "WM Casino", image: wmCasino },
-  { name: "Pretty Gaming", image: prettyGaming },
+  { name: "Jili", image: jili },
   { name: "PG Soft", image: pgSoft },
+  { name: "Yggdrasil", image: yggdrasil },
   { name: "Joker Gaming", image: jokerGaming },
   { name: "Pragmatic Play", image: pragmaticPlay },
-  { name: "Spadegaming", image: spadegaming },
-  { name: "Jili", image: jili },
   { name: "CQ9", image: cq9 },
-  { name: "Habanero", image: habanero },
-  { name: "Red Tiger", image: redTiger },
+  { name: "Kingmaker", image: kingmaker },
+  { name: "WM Casino", image: wmCasino },
+  { name: "Microgaming", image: microgaming },
+  { name: "Dream Gaming", image: dreamgaming },
 ];
 
 const Providers = () => {
@@ -40,18 +36,20 @@ const Providers = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {providers.map((provider, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-gold transition-all duration-300 hover:scale-105 cursor-pointer bg-card border-border hover:border-primary overflow-hidden"
+              className="group relative hover:shadow-gold transition-all duration-500 hover:scale-110 cursor-pointer bg-card/50 backdrop-blur-sm border-2 border-border hover:border-primary overflow-hidden"
             >
-              <CardContent className="p-4">
-                <div className="flex items-center justify-center h-24">
+              <CardContent className="p-6">
+                <div className="flex items-center justify-center h-20 relative">
+                  <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-lg" />
                   <img 
                     src={provider.image} 
-                    alt={provider.name}
-                    className="w-full h-full object-contain transition-all duration-300 group-hover:scale-110"
+                    alt={`${provider.name} - ผู้ให้บริการเกมคาสิโนชั้นนำ`}
+                    className="w-full h-full object-contain transition-all duration-500 group-hover:scale-125 relative z-10"
+                    loading="lazy"
                   />
                 </div>
               </CardContent>
