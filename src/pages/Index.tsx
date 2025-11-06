@@ -7,23 +7,19 @@ import Promotions from "@/components/Promotions";
 import Providers from "@/components/Providers";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background pb-20 md:pb-0">
+  return <div className="min-h-screen bg-background pb-20 md:pb-0">
       <Header />
       <PromoCarousel />
       <main>
         <Hero />
         <Providers />
         <Promotions />
-        <GameCategories />
+        
         <Features />
       </main>
       <Footer />
       <BottomNav />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
