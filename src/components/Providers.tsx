@@ -37,6 +37,7 @@ const providers = [
   { name: "Microgaming", image: microgaming },
   { name: "Sexy Gaming", image: sexyGaming },
   { name: "SA Gaming", image: saGaming },
+  { name: "Dream Gaming", image: dreamgaming },
 ];
 
 const providerBanners = [
