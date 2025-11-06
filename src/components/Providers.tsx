@@ -117,6 +117,12 @@ const Providers = () => {
         </div>
 
         {/* Provider Grid */}
+        <div className="text-center mb-8">
+          <h3 className="text-3xl md:text-4xl font-bold bg-gradient-gold bg-clip-text text-transparent">
+            ผู้ให้บริการชั้นนำ
+          </h3>
+        </div>
+
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
           {providers.map((provider, index) => (
             <Card 
