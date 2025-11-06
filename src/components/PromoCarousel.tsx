@@ -20,7 +20,7 @@ const PromoCarousel = () => {
 
   return (
     <div className="w-full bg-background py-4 md:py-6">
-      <div className="w-full px-2 md:px-4 mx-auto" style={{ maxWidth: '1000px' }}>
+      <div className="w-full md:w-[1000px] px-2 md:px-0 mx-auto">
         <Carousel
           opts={{
             align: "center",
@@ -41,26 +41,23 @@ const PromoCarousel = () => {
             {promos.map((promo, index) => (
               <CarouselItem key={index}>
                 <div 
-                  className="relative w-full rounded-lg md:rounded-xl overflow-hidden"
+                  className="relative w-full overflow-hidden"
                   style={{
                     height: `${height.mobile}px`,
+                    width: '100%',
                   }}
                 >
                   <style>
                     {`
-                      @media (min-width: 640px) {
-                        .carousel-height-${index} {
-                          height: ${height.tablet}px !important;
-                        }
-                      }
-                      @media (min-width: 1024px) {
-                        .carousel-height-${index} {
+                      @media (min-width: 768px) {
+                        .carousel-container-${index} {
                           height: ${height.desktop}px !important;
+                          width: 1000px !important;
                         }
                       }
                     `}
                   </style>
-                  <div className={`carousel-height-${index} w-full h-full`}>
+                  <div className={`carousel-container-${index} w-full h-full`}>
                     <img 
                       src={promo.image} 
                       alt={promo.alt}
