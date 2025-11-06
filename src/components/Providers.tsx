@@ -26,6 +26,11 @@ import sexyGaming from "@/assets/providers/sexy-gaming.png";
 import saGaming from "@/assets/providers/sa-gaming.png";
 
 const providers = [
+  { name: "SA Gaming", image: saGaming },
+  { name: "Sexy Gaming", image: sexyGaming },
+  { name: "Dream Gaming", image: dreamgaming },
+  { name: "WM Casino", image: wmCasino },
+  { name: "Microgaming", image: microgaming },
   { name: "Jili", image: jili },
   { name: "PG Soft", image: pgSoft },
   { name: "Yggdrasil", image: yggdrasil },
@@ -33,11 +38,6 @@ const providers = [
   { name: "Pragmatic Play", image: pragmaticPlay },
   { name: "CQ9", image: cq9 },
   { name: "Kingmaker", image: kingmaker },
-  { name: "WM Casino", image: wmCasino },
-  { name: "Microgaming", image: microgaming },
-  { name: "Sexy Gaming", image: sexyGaming },
-  { name: "SA Gaming", image: saGaming },
-  { name: "Dream Gaming", image: dreamgaming },
 ];
 
 const providerBanners = [
