@@ -20,7 +20,7 @@ const PromoCarousel = () => {
 
   return (
     <div className="w-full bg-background py-4 md:py-6">
-      <div className="w-full px-2 md:px-4 max-w-7xl mx-auto">
+      <div className="w-full px-2 md:px-4 mx-auto" style={{ maxWidth: '1000px' }}>
         <Carousel
           opts={{
             align: "center",

@@ -11,9 +11,9 @@ export const logoConfig = {
 
 export const promoCarouselConfig = {
   // ความสูงของ Slide (สามารถปรับได้)
-  // หน่วยเป็น pixels - ปรับให้เหมาะกับภาพ 800x400 (aspect ratio 2:1)
+  // หน่วยเป็น pixels - ปรับให้เหมาะกับภาพ
   height: {
-    mobile: 400, // ความสูงบนมือถือ (px)
+    mobile: 200, // ความสูงบนมือถือ (px)
     tablet: 400, // ความสูงบน tablet (px)
     desktop: 400, // ความสูงบนหน้าจอใหญ่ (px)
   },
