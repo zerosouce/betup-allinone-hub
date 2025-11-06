@@ -59,15 +59,13 @@ const Providers = () => {
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-gold bg-clip-text text-transparent mb-4">
             ค่ายเกมชั้นนำระดับโลก
           </h2>
-          <p className="text-lg text-muted-foreground">
-            รวมค่ายเกมดังทุกค่าย ให้คุณเลือกเล่นได้ตามใจ
-          </p>
+          <p className="text-lg text-muted-foreground">รวมค่ายเกมดังทุกค่าย ให้คุณเลือกเล่นได้ตามใจ</p>
         </div>
 
         {/* Main Banner */}
         <div className="mb-8 relative rounded-xl overflow-hidden group cursor-pointer">
-          <img 
-            src={bannerMain} 
+          <img
+            src={bannerMain}
             alt="ค่ายเกมชั้นนำ - LalikaBET"
             className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
           />
@@ -91,8 +89,8 @@ const Providers = () => {
               {providerBanners.map((banner, index) => (
                 <CarouselItem key={index} className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <div className="relative rounded-xl overflow-hidden group cursor-pointer">
-                    <img 
-                      src={banner.image} 
+                    <img
+                      src={banner.image}
                       alt={`${banner.name} - ผู้ให้บริการเกมคาสิโนชั้นนำ`}
                       className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                       loading="lazy"
@@ -108,16 +106,13 @@ const Providers = () => {
 
         {/* View All Button */}
         <div className="text-center mb-12">
-          <Button 
-            size="lg"
-            className="bg-gold hover:bg-gold-dark text-black font-semibold px-8"
-          >
+          <Button size="lg" className="bg-gold hover:bg-gold-dark text-black font-semibold px-8">
             ดูทั้งหมด
           </Button>
         </div>
 
         {/* Provider Grid */}
-        <div className="text-center mb-8">
+        <div className="text-left mb-8">
           <h3 className="text-3xl md:text-4xl font-bold bg-gradient-gold bg-clip-text text-transparent">
             ผู้ให้บริการชั้นนำ
           </h3>
@@ -125,15 +120,15 @@ const Providers = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
           {providers.map((provider, index) => (
-            <Card 
-              key={index} 
+            <Card
+              key={index}
               className="group relative hover:shadow-gold transition-all duration-500 hover:scale-110 cursor-pointer bg-card/50 backdrop-blur-sm border-2 border-border hover:border-primary overflow-hidden"
             >
               <CardContent className="p-6">
                 <div className="flex items-center justify-center h-20 relative">
                   <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-lg" />
-                  <img 
-                    src={provider.image} 
+                  <img
+                    src={provider.image}
                     alt={`${provider.name} - ผู้ให้บริการเกมคาสิโนชั้นนำ`}
                     className="w-full h-full object-contain transition-all duration-500 group-hover:scale-125 relative z-10"
                     loading="lazy"
