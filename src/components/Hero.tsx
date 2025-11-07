@@ -44,28 +44,89 @@ const Hero = () => {
 
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
-            <div className="flex flex-col items-center gap-3 p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
-              <div className="h-12 w-12 rounded-full bg-gradient-gold flex items-center justify-center">
-                <Zap className="h-6 w-6 text-black" />
+            {/* Feature 1 - ฝาก-ถอน AUTO */}
+            <div className="group relative flex flex-col items-center gap-3 p-6 rounded-xl bg-gradient-to-br from-card via-card to-muted border-2 border-border hover:border-primary transition-all duration-500 hover:shadow-gold hover:scale-105 animate-fade-in overflow-hidden">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl"></div>
+              
+              {/* Decorative corner */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-gold opacity-10 rounded-bl-full"></div>
+              
+              {/* Icon with animation */}
+              <div className="relative h-16 w-16 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold group-hover:animate-float">
+                <div className="absolute inset-0 rounded-full bg-gradient-gold animate-ping opacity-20"></div>
+                <Zap className="h-8 w-8 text-black relative z-10 group-hover:rotate-12 transition-transform duration-300" />
               </div>
-              <h3 className="text-lg font-bold text-foreground">ฝาก-ถอน AUTO</h3>
-              <p className="text-sm text-muted-foreground">ไม่มีขั้นต่ำ รวดเร็วใน 30 วินาที</p>
+              
+              <div className="text-center space-y-2 relative z-10">
+                <h3 className="text-xl font-bold bg-gradient-gold bg-clip-text text-transparent">
+                  ฝาก-ถอน AUTO
+                </h3>
+                <div className="flex items-center justify-center gap-2 text-sm text-foreground font-medium">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary/20 text-primary text-xs font-bold">
+                    0 บาท
+                  </span>
+                  ขั้นต่ำ
+                </div>
+                <p className="text-sm text-muted-foreground">รวดเร็วใน 30 วินาที ⚡</p>
+              </div>
             </div>
 
-            <div className="flex flex-col items-center gap-3 p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
-              <div className="h-12 w-12 rounded-full bg-gradient-gold flex items-center justify-center">
-                <Shield className="h-6 w-6 text-black" />
+            {/* Feature 2 - ปลอดภัย 100% */}
+            <div className="group relative flex flex-col items-center gap-3 p-6 rounded-xl bg-gradient-to-br from-card via-card to-muted border-2 border-border hover:border-secondary transition-all duration-500 hover:shadow-red hover:scale-105 animate-fade-in overflow-hidden" style={{ animationDelay: "150ms" }}>
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-red opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl"></div>
+              
+              {/* Decorative corner */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-red opacity-10 rounded-bl-full"></div>
+              
+              {/* Icon with animation */}
+              <div className="relative h-16 w-16 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center shadow-red group-hover:animate-float">
+                <div className="absolute inset-0 rounded-full bg-secondary animate-pulse opacity-20"></div>
+                <Shield className="h-8 w-8 text-white relative z-10 group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-lg font-bold text-foreground">ปลอดภัย 100%</h3>
-              <p className="text-sm text-muted-foreground">ระบบรักษาความปลอดภัยระดับสากล</p>
+              
+              <div className="text-center space-y-2 relative z-10">
+                <h3 className="text-xl font-bold bg-gradient-red bg-clip-text text-transparent">
+                  ปลอดภัย 100%
+                </h3>
+                <div className="flex items-center justify-center gap-1 text-sm">
+                  <span className="text-secondary">★★★★★</span>
+                </div>
+                <p className="text-sm text-muted-foreground">ระบบมาตรฐานสากล 🛡️</p>
+              </div>
             </div>
 
-            <div className="flex flex-col items-center gap-3 p-6 rounded-lg bg-card border border-border hover:border-primary transition-colors">
-              <div className="h-12 w-12 rounded-full bg-gradient-gold flex items-center justify-center">
-                <Sparkles className="h-6 w-6 text-black" />
+            {/* Feature 3 - โบนัสเพียบ */}
+            <div className="group relative flex flex-col items-center gap-3 p-6 rounded-xl bg-gradient-to-br from-card via-card to-muted border-2 border-border hover:border-primary transition-all duration-500 hover:shadow-gold hover:scale-105 animate-fade-in overflow-hidden" style={{ animationDelay: "300ms" }}>
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl"></div>
+              
+              {/* Decorative corner */}
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-gold opacity-10 rounded-bl-full"></div>
+              
+              {/* Floating particles */}
+              <div className="absolute top-4 left-4 w-2 h-2 bg-primary rounded-full animate-ping opacity-50"></div>
+              <div className="absolute bottom-4 right-6 w-1.5 h-1.5 bg-primary rounded-full animate-ping opacity-50" style={{ animationDelay: "500ms" }}></div>
+              
+              {/* Icon with animation */}
+              <div className="relative h-16 w-16 rounded-full bg-gradient-gold flex items-center justify-center shadow-gold group-hover:animate-float">
+                <div className="absolute inset-0 rounded-full bg-gradient-gold animate-shimmer opacity-30 bg-[length:200%_100%]"></div>
+                <Sparkles className="h-8 w-8 text-black relative z-10 group-hover:rotate-180 transition-transform duration-700" />
               </div>
-              <h3 className="text-lg font-bold text-foreground">โบนัสเพียบ</h3>
-              <p className="text-sm text-muted-foreground">โปรโมชั่นสุดคุ้มทุกวัน</p>
+              
+              <div className="text-center space-y-2 relative z-10">
+                <h3 className="text-xl font-bold bg-gradient-gold bg-clip-text text-transparent">
+                  โบนัสเพียบ
+                </h3>
+                <div className="flex items-center justify-center gap-1">
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-primary text-black text-xs font-bold animate-pulse">
+                    NEW
+                  </span>
+                  <span className="text-sm text-foreground font-medium">ทุกวัน</span>
+                </div>
+                <p className="text-sm text-muted-foreground">โปรโมชั่นสุดคุ้ม 🎁</p>
+              </div>
             </div>
           </div>
         </div>
